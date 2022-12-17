@@ -96,16 +96,22 @@ img {
 
 /*Site navigation*/
 
-.header-page {
-  display: flex;
+header {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 50%;
   width: 100%;
   height: var(--header-height);
   background-color: var(--white-color);
   border-bottom: 1px solid #ececec;
+
+  transform: translateX(50%);
+
   z-index: 1;
+}
+
+.header-page {
+  display: flex;
 }
 
 .navigation {
@@ -295,14 +301,11 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
-
   opacity: 1;
-
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
-  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
